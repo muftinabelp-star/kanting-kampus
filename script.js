@@ -54,12 +54,39 @@ let keranjang = [];
 // LOGIN
 // ==========================================
 
+let users = [
+    {
+        username: "admin",
+        password: "12345"
+    },
+    {
+        username: "Abel",
+        password: "Abel"
+    },
+    {
+        username: "Denis",
+        password: "Denis"
+    },
+    {
+        username: "Farhan",
+        password: "Farhan"
+    }
+       
+];
+
 function login() {
 
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value.trim();
 
-    if (username === "admin" && password === "12345") {
+    if (
+        (username === "admin" && password === "12345") ||
+        (username === "Abel" && password === "Abel")
+        (username === "Denis" && password === "Denis")
+        (username === "Farhan" && password === "Farhan")
+    ) {
+
+        alert("Login berhasil!");
 
         document.getElementById("loginPage").style.display = "none";
         document.getElementById("app").style.display = "block";
@@ -71,16 +98,6 @@ function login() {
         document.getElementById("loginError").innerText =
             "Username atau password salah!";
     }
-}
-
-
-function logout() {
-
-    document.getElementById("app").style.display = "none";
-    document.getElementById("loginPage").style.display = "flex";
-
-    document.getElementById("username").value = "";
-    document.getElementById("password").value = "";
 }
 
 
