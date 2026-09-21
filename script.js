@@ -83,7 +83,7 @@ function login() {
         (username === "admin" && password === "12345") ||
         (username === "Abel" && password === "Abel") ||
         (username === "Denis" && password === "Denis") ||
-        (username === "Farhan" && password === "Farhan") ||
+        (username === "Farhan" && password === "Farhan")
     ) {
 
         alert("Login berhasil!");
