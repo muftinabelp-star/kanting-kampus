@@ -177,6 +177,29 @@
                 Total:
                 <span id="totalKeranjang">Rp0</span>
             </h2>
+            
+            <!-- PEMBAYARAN-->
+             <div class="payment-box">
+
+                <h3> Pemabayaran</h3>
+
+                <p>
+                    Total Bayar:
+                    <span id="totalbayar>Rp0</span>
+                </p>
+
+                <input
+                    type="number"
+                    id="uangBayar"
+                    aria-placeholder="Masukkan uang pembayaran"
+                >
+                
+                <button onclick="prosesPembayaran()">
+                    Bayar
+                </button>
+
+                <p id="hasilBayar"></p>
+             </div>
 
             <button onclick="simpanTransaksi()">
                 Simpan Transaksi
