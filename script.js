@@ -76,7 +76,7 @@ let users = [
 
 function login() {
     alert("Fungsi login terpanggil");
-    
+
     let username = document.getElementById("username").value.trim();
     let password = document.getElementById("password").value.trim();
 
@@ -908,4 +908,12 @@ function tampilkanSemua() {
     tampilkanRiwayat();
 
     tampilkanLaporan();
+}
+function logout() {
+    document.getElementById("app").style.display = "none";
+    document.getElementById("loginPage").style.display = "flex";
+
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("loginError").innerText = "";
 }
