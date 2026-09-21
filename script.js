@@ -81,9 +81,9 @@ function login() {
 
     if (
         (username === "admin" && password === "12345") ||
-        (username === "Abel" && password === "Abel")
-        (username === "Denis" && password === "Denis")
-        (username === "Farhan" && password === "Farhan")
+        (username === "Abel" && password === "Abel") ||
+        (username === "Denis" && password === "Denis") ||
+        (username === "Farhan" && password === "Farhan") ||
     ) {
 
         alert("Login berhasil!");
