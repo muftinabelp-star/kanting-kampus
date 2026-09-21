@@ -917,3 +917,35 @@ function logout() {
     document.getElementById("password").value = "";
     document.getElementById("loginError").innerText = "";
 }
+
+function prosesPembayaran() {
+
+    let totalText = document.getElementById("totalKeranjang").innerText;
+
+    let total = Number(
+        totalText.replace("Rp", "").replace(/\./g, "")
+    );
+
+    let uang = Number(document.getElementById("uangBayar").value);
+
+    let hasil = document.getElementById("hasilBayar");
+
+    if (uang <= 0) {
+        hasil.innerText = "Masukkan uang pembayaran.";
+        return;
+    }
+
+    if (uang < total) {
+        hasil.innerText =
+            "Uang kurang Rp" +
+            (total - uang).toLocaleString("id-ID");
+
+        return;
+    }
+
+    let kembalian = uang - total;
+
+    hasil.innerText =
+        "Pembayaran berhasil! Kembalian: Rp" +
+        kembalian.toLocaleString("id-ID");
+}
